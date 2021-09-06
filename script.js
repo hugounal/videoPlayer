@@ -165,3 +165,10 @@ volumeRange.addEventListener('click', changeVolume);
 volumeIcon.addEventListener('click', toggleMute);
 speed.addEventListener('change', changeSpeed);
 fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+// Audio Section
+var myvideo = document.getElementById("myvideo");
+var myaudio = document.getElementById("myaudio");
+myvideo.onplay  = function() { myaudio.play();  }
+myvideo.onpause = function() { myaudio.pause();
+myaudio.volume = myvideo.volume; }
